@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=0.5" />
+		<title>SuperheroMe with IBM Watson</title>
+		<link rel="shortcut icon" type="image/png" href="favicon/favicon.png"/>
+
+		<!-- CSS -->
+		<link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+
+		<!-- Vendor Javascript -->
+		<script type="text/javascript" src="js/vendor/jquery-1.11.1.min.js"></script>		
+		<script type="text/javascript" src="js/vendor/greensock/TweenMax.min.js"></script>
+		<script type="text/javascript" src="js/vendor/ScrollMagic.min.js"></script>
+		<script type="text/javascript" src="js/vendor/plugins/animation.gsap.min.js"></script>
+
+		<!-- Custom Javascript -->
+		<script type="text/javascript" src="js/main.js"></script>
+	</head>
+	<body>
+		<div id="content-wrapper">
+			<div id="example-wrapper">
+				<div class="scrollContent">
+					<section id="titlechart">
+						<div id="description">
+							<h1>SuperheroMe with IBM Watson</h1>
+							<img src="img/ibm_watson_logo.png">
+						</div>
+					</section>
+					<section class="demo grey_background">
+						<style type="text/css">
+							.parallaxParent {
+								height: 100vh;
+								overflow: hidden;
+							}
+							.parallaxParent > * {
+								height: 200%;
+								position: relative;
+								top: -100%;
+							}
+						</style>
+						<div class="spacer s0"></div>
+						<div id="parallax1" class="parallaxParent">
+							<div style="background-image: url(img/superheroes.jpeg);"></div>
+						</div>
+						<div class="spacer s1">
+							<br/>
+							<div class="center_column">
+								<h2>The Idea</h2>
+								<a href="https://ibm.box.com/s/3xhlv03bq943zp4jq8frfvgp1lk5wi41" target="_blank">Click here for the explanation video</a>
+								<p>Answering boring quiz questions for hours to find out the superhero inside you is not for Superheroes... Luckily, IBM’s supercomputer, Watson have a solution for them as well, which is:
+								<ul>
+									<li><strong>Fast</strong> – don’t have to spend any time on answering multiple choice questions</li>
+									<li><strong>Transparent</strong> – cheating on the answers is not an option as it is not based on self-reporting</li>
+									<li><strong>Extensive</strong> – the result can be anything, as it is not limited to a certain number of superheroes</li>
+									<li><strong>Scientific</strong> – the superheroes’ personality is determined with a scientific approach and not by the guesses and impressions of the survey or quiz creator</li>
+								</p>
+							</div>
+							<br/>
+						</div>
+						<div class="spacer s0"></div>
+						<div id="parallax2" class="parallaxParent">
+							<div style="background-image: url(img/thor_resized.jpg);"></div>
+						</div>
+						<div class="spacer s1">
+							<br/>
+							<div class="center_column">
+								<h2>Check my Profile</h2>
+								<p>In just a few seconds you can get to know who is the superhero inside you. Just upload some self-written English text with at least 100 words – anything, an e-mail or messenger chat you wrote, an article by you, your CV, etc. – and click the SuperheroMe button below.
+								</p>
+							</div>
+							
+							<div class="center_column">
+								<textarea cols="100" rows="8" id="data_text"></textarea><br/>
+
+								<button id="submit_button">SuperheroMe</button>
+								<span id="error_message"></span>
+								<span class="ajax_loader"><img src="img/ajax-loader.gif"></span>
+								</p>
+							</div>
+							<br/>						
+						</div>
+						<div class="spacer s0 center_column"></div>
+						<div id="parallax3" class="parallaxParent">
+							<div style="background-image: url(img/blackwidow_background.jpeg);"></div>
+						</div>
+						<div class="spacer s2" id="result_header">
+							<br/>
+							<div class="center_column centered_text">
+								<div id="pow" class="initial_hide"><img src="img/pow.png"></div>
+								<div id="result_text">You can read the result once the personality analysis is done.</div>
+							</div>
+							<br/>
+						</div>
+						<div class="spacer s0 center_column"></div>
+						<div id="parallax4" class="parallaxParent">
+							<div style="background-image: url(img/batman_3d_wallpapers.jpeg);"></div>
+						</div>
+						<div class="spacer s3">
+							<div class="center_column">
+								<br/>
+								<h2>Behind the magic</h2>
+								<ol>
+									<li><strong>Determining your personality:</strong> Several researchers found that variations in word usage in writings such as blogs, essays, and tweets can predict aspects of personality. By analyzing these digital forms of communications, IBM Watson’s Personality Insights service is able to infer individuals' intrinsic personality characteristics. See more info <a href="https://console.bluemix.net/docs/services/personality-insights/science.html#science" target="_blank">here</a>.</li>
+									<li><strong>Analyzing Superheroes personality</strong> Luckily Superheroes have digital forms of communication as well, which can be found in the form of scripts from movies on IMDB. By downloading these scripts and sending them to IBM Watson’s Personality Insights service it became possible to determine their personality as well.
+										<ul>
+											<li>We have Watson analysed the scripts of action movies a between 1977-2013</li>
+											<li>We chose those characters from each movie who had more than 100 words</li>
+											</li>Analyzed the personality of all relevant characters with the IBM Watson’s Personality Insights service</li>
+											<li>The result is fed into a database</li>
+										</ul>
+									</li>
+									<li><strong>Finding the best match:</strong> We are comparing your the Big5 traits with the Superheroes' and rank them by whose personality profile is the closest to yours.</li>
+								</ol>
+							</div>
+							<br/>
+						</div>
+						<div class="spacer s_viewport">
+							<br/>
+							<div class="center_column bottom_text">
+								Made by Eszter Szilágyi, Zoltán Balogh - 2017. august 22.
+							</div>
+							<br/>
+						</div>
+						<script>
+							var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+
+							new ScrollMagic.Scene({triggerElement: "#parallax1"})
+											.setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
+											.addTo(controller);
+
+							new ScrollMagic.Scene({triggerElement: "#parallax2"})
+											.setTween("#parallax2 > div", {y: "80%", ease: Linear.easeNone})
+											.addTo(controller);
+
+							new ScrollMagic.Scene({triggerElement: "#parallax3"})
+											.setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
+											.addTo(controller);
+							new ScrollMagic.Scene({triggerElement: "#parallax4"})
+											.setTween("#parallax4 > div", {y: "80%", ease: Linear.easeNone})
+											.addTo(controller);
+						</script>
+					</section>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

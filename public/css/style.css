@@ -1,0 +1,148 @@
+@import url('bootstrap.min.css');
+@import url('bootstrap-theme.min.css');
+@import url('pnotify.custom.min.css');
+@import url('bootstrap-wysihtml5-0.0.2.css');
+
+/* General */
+.ajax_loader {
+	display: none;
+}
+
+.initial_hide {
+	display: none;
+}
+
+/* Modal fix */
+.modal-dialog {
+	z-index: 1041;
+}
+
+/* Custom */
+#result_text {
+	font-family: 'Sedgwick Ave', cursive;
+	font-size: 20px;
+	text-align: center;
+}
+
+.centered_text {
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Sedgwick Ave', cursive;
+	font-weight: bold;
+	font-size: 72px;
+}
+
+h2 {
+	font-family: 'Sedgwick Ave', cursive;
+	font-weight: bold;
+	font-size: 50px;
+}
+
+.bottom_text {
+	font-size: 10px;
+	font-style: italic;
+}
+
+.grey_background {
+	background-position: right bottom;
+	background-image: url("../img/all_background_100px.jpg");
+	background-repeat: repeat-y;
+	background-color: #9c9c9c;
+}
+
+#titlechart {
+	background-position: right bottom, right bottom;
+	background-image: url("../img/all_background_resized.jpg"), url("../img/all_background_100px.jpg");
+	background-repeat: no-repeat, repeat-y;
+	background-color: #9c9c9c;
+}
+
+.center_column {
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+.center_column textarea, .center_column button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center_align {
+	text-align: center;
+}
+
+/* Inherited from Scrollmagic */
+#content-wrapper, #example-wrapper {
+	height: 100%;
+}
+#example-wrapper .scrollContent {
+	height: 100%;
+}
+
+.horizontal.scrollContainer {
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+#example-wrapper.scrollContainer .scrollContent {
+	width: 100%;
+	height: auto;
+}
+section#titlechart {
+	text-align: center;
+	position: relative;
+	height: 100%;
+	min-height: 500px;
+	min-width: 100%;
+	height: 100vh;
+}
+section#titlechart #description {
+	top: 35%;
+	left: 50%;
+	position: absolute;
+	width: 600px;
+	height: 300px;
+	margin: -150px auto auto -300px;
+}
+
+.spacer {
+	min-height: 100px;
+}
+.spacer.s0 {
+	min-height: 1px;
+}
+.spacer.s1 {
+	min-height: 100px;
+}
+.spacer.s2 {
+	min-height: 200px;
+}
+.spacer.s3 {
+	min-height: 300px;
+}
+.spacer.s4 {
+	min-height: 400px;
+}
+.spacer.s5 {
+	min-height: 500px;
+}
+.spacer.s6 {
+	min-height: 600px;
+}
+.spacer.s7 {
+	min-height: 700px;
+}
+.spacer.s8 {
+	min-height: 800px;
+}
+.spacer.s9 {
+	min-height: 900px;
+}
+.spacer.s10 {
+	min-height: 1000px;
+}
+.spacer.s_viewport {
+	min-height: 100%;
+}
